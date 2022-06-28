@@ -1,8 +1,5 @@
-.metadata/
-.git/
-scanner/.settings/
-scanner/.classpath/
-scanner/.project/
-remake-teste/.settings/
-remake-teste/.classpath/
-remake-teste/.project/
+/.metadata/
+/.git/
+/scanner/.settings/
+/scanner/.classpath/
+/scanner/.project/
