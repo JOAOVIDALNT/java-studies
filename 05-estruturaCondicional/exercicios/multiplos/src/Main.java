@@ -18,7 +18,7 @@ public class Main {
             System.out.println("NÃO SÃO MÚLTIPLOS");
         }
 
-
+        sc.close();
     }
     
 }

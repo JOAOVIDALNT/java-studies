@@ -29,5 +29,6 @@ public class Main {
 
         System.out.println("O JOGO DUROU " + duration + " HORA(S)");
 
+        sc.close();
     }
 }
