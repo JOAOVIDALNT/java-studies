@@ -21,11 +21,11 @@ public class Program {
 
             System.out.println("PRODUCT " + (i+1));
             System.out.print("Name: ");
-           String name = sc.nextLine();
+            String name = sc.nextLine();
             System.out.print("Price: ");
-           double price = sc.nextDouble();
+            double price = sc.nextDouble();
 
-           vect[i] = new Product(name, price);
+            vect[i] = new Product(name, price);
         }
 
         double sum = 0.0;
