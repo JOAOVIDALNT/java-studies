@@ -10,6 +10,7 @@ public class Program {
         Locale.setDefault(Locale.US);
         Scanner sc = new Scanner(System.in);
 
+        System.out.print("Enter the number of products to set avarage: ");
         int n = sc.nextInt();
 
         Product[] vect = new Product[n];
@@ -17,7 +18,11 @@ public class Program {
 
         for (int i=0; i < vect.length; i++) {  // no lugar de 'n' pode-se usar vect.length
            sc.nextLine(); // consumir o scanner anterior
+
+            System.out.println("PRODUCT " + (i+1));
+            System.out.print("Name: ");
            String name = sc.nextLine();
+            System.out.print("Price: ");
            double price = sc.nextDouble();
 
            vect[i] = new Product(name, price);
@@ -31,7 +36,7 @@ public class Program {
 
         double avg = sum / vect.length;
 
-        System.out.printf("AVARAGE PRICE = %.2f%n", avg);
+        System.out.printf("AVARAGE PRICE = $ %.2f%n", avg);
 
         sc.close();
     }
