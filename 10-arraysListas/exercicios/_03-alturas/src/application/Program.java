@@ -47,7 +47,7 @@ public class Program {
             minorspercent = ((double)minorstotal / vect.length) * 100.0;
 
             System.out.printf("Average height: %.2f%n", avg);
-            System.out.printf("Under 16 years old: %.2f%n", minorspercent);
+            System.out.printf("Under 16 years old: %.1f%%\n", minorspercent);
 
 
 
