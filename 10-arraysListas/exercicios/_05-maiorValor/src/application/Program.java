@@ -17,7 +17,7 @@ public class Program {
             System.out.print("Type a number: ");
             vect[i] = input.nextDouble();
         }
-        
+
         double highest = vect[0];
         int highestpos = 0;
 
