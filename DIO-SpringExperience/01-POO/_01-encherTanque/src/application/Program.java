@@ -10,18 +10,18 @@ public class Program {
         Locale.setDefault(Locale.US);
         Scanner input = new Scanner(System.in);
 
-        Car carro =  new Car();
+        Car car =  new Car();
         String modelo = null, color = null;
-        double tanque = 0;
+        double tanque = 0, fuel = 0;
 
-        Car car = new Car(modelo, color, tanque);
+        Car carProperties = new Car(modelo, color, tanque);
 
-        do {
-            System.out.print("How many liters to be added on the tank? ");
-            double fuel = input.nextDouble();
-            System.out.printf("%.2f%n", car.encherTanque(fuel));
-        } while (car.getTanque() < 100);
 
+        System.out.println("How many liters to be added in the tank?: ");
+        fuel = input.nextDouble();
+        car.encherTanque(fuel);
+
+        System.out.println(car);
 
         input.close();
     }

@@ -7,7 +7,8 @@ public class Car {
     private double tanque;
 
     public double encherTanque(double fuel) {
-        return tanque += fuel;
+            return tanque += fuel;
+
     }
 
 
@@ -43,5 +44,10 @@ public class Car {
 
     public void setTanque(double tanque) {
         this.tanque = tanque;
+    }
+
+    @Override
+    public String toString() {
+        return "total liters added: " + getTanque() + ", thank you and drive carefully!";
     }
 }
