@@ -24,6 +24,7 @@ public class Program {
             Integer id = input.nextInt();
             while (hasId(list, id)) {
                 System.out.println("Id already taken! try again" );
+                id = input.nextInt();
             }
 
 
