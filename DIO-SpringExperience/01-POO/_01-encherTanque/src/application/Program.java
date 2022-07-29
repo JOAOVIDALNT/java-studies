@@ -16,7 +16,6 @@ public class Program {
 
         Car carProperties = new Car(modelo, color, tanque);
 
-
         System.out.println("How many liters to be added in the tank?: ");
         fuel = input.nextDouble();
         car.encherTanque(fuel);
