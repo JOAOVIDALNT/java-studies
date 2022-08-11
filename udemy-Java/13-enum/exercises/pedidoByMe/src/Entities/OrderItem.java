@@ -46,7 +46,8 @@ public class OrderItem {
     public String toString() {
         return product.getId()
                 + ", R$"
-                + String.format("%.2f", price)
+                + String.format("%.2f, ", price)
+                + "Quantity: "
                 + quantity
                 + ", Subtotal: R$"
                 + String.format("%.2f", subTotal());
