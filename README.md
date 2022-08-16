@@ -6,8 +6,8 @@ I hope y'll enjoy
 </p>
 
 <h3 align="center">Sumary</h3>
-<p>
-- <a href="https://github.com/JOAOVIDALNT/java-studies/tree/main/udemy-Java" align="center">Java Udemy Course by: Nélio Alves</a>
+<p align="center">
+ <a href="https://github.com/JOAOVIDALNT/java-studies/tree/main/udemy-Java">Java Udemy Course by: Nélio Alves</a>
 </p>  
 
 
