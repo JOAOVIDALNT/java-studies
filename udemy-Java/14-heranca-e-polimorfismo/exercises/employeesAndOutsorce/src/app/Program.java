@@ -26,8 +26,8 @@ public class Program {
             char x = sc.next().charAt(0);
 
             System.out.print("Name: ");
-            String name = sc.nextLine();
             sc.nextLine();
+            String name = sc.nextLine();
 
             System.out.print("Hours: ");
             int hours = sc.nextInt();
