@@ -1,0 +1,2 @@
+- testando vim e criando arquivo pra exibir no File do java
+- lendo o arquivo e mostrando no scanner
