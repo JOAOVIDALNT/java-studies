@@ -10,7 +10,7 @@ public class ContractService {
 
     private OnlinePaymentService onlinePaymentService;
 
-    public ContractService(OnlinePaymentService onlinePaymentService) {
+    public ContractService(OnlinePaymentService onlinePaymentService) { // define o OnlinePaymentService como argumento e o serviço especifico (paypalService) pode ser instanciado no lugar por que implementa
         this.onlinePaymentService = onlinePaymentService;
     }
 

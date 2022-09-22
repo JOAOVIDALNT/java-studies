@@ -28,12 +28,12 @@ public class Program {
         System.out.print("Contract value: ");
         double totalValue = sc.nextDouble();
 
-        Contract contract = new Contract(date, number, totalValue);
+        Contract contract = new Contract(date, number, totalValue); // instancia o contrato
 
         System.out.print("Enter the number of installments: ");
-        int n = sc.nextInt();
+        int n = sc.nextInt(); // define o numero de parcelas
 
-        ContractService contractService = new ContractService(new PaypalService());
+        ContractService contractService = new ContractService(new PaypalService()); // aplica a classe paypalService através da interface onlinePaymentService (que é o arumento na classe ContractService)
 
         contractService.processContract(contract, n);
 
