@@ -8,9 +8,16 @@ import java.util.TreeSet;
 public class Program {
     public static void main(String[] args) {
         Set<String> set = new LinkedHashSet<>();
+
 //                        new LinkedHashSet<>() -> mantém a ordem em que os elementos são inseridos
+//                        velocidade intermediária e elementos na ordem em que são adicionados
+
 //                        new TreeSet<>(); -> mantém ordenado (string: alfabética)
+//                        mais lento (operações O(long(n)) em árvore rubro-negra) e ordenado
+//                        pelo compareTo do objeto (out Comparator)
+
 //                        new HashSet<>(); -> não garante a ordem
+//                        mais rápido (operaões O(1) em tabela hash) e não ordenado
 
         set.add("Televisão");
         set.add("Notebook");
