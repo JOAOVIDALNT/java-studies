@@ -16,7 +16,7 @@ public class Main {
         list.add(new Product("SSD", 130.00));
 
         list.removeIf(p -> p.getPrice() >= 100.00);
-        
+
 
 //        list.remove(new ProductPredicate()); -> aplicando através da interface funcional
 //        list.removeIf(Product::staticProductPredicate); -> aplicando através de um método estático dentro da classe product
