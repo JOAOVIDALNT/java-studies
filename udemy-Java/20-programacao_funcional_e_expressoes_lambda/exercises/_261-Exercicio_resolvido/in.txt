@@ -1,0 +1,7 @@
+Notebook,3765.00
+Celphone,1400.00
+Headset,160.00
+Mouse,180.00
+Keyboard,230.00
+Monitor,1500.00
+

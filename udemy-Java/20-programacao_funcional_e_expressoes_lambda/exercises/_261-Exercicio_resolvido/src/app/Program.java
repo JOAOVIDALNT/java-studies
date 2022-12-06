@@ -38,7 +38,7 @@ public class Program {
 
             List<String> names = list.stream()
                     .filter(p -> p.getPrice() < avg)
-                    .map(p -> p.getName()).sorted(comp.reversed())
+                    .map(p -> p.getName()).sorted(comp.reversed()) // ordena por ordem alfabética inversa
                     .collect(Collectors.toList());
 
             names.forEach(System.out::println);
