@@ -10,3 +10,6 @@
 - POST
 - PUT
 - DELETE
+
+#### Dispacher Servelet
+- Sempre que enviamos requisoções o dispacher servelet é quem recebe e trata o roteamento para a controller que deve receber e responder a solicitação. 
