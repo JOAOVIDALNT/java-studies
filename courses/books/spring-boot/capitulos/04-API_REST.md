@@ -479,3 +479,26 @@ abaixo.
 Agora sim, com a inserção das HATEOAS na aplicação e feita as
 configurações necessárias, pode-se dizer que a API de produtos atingiu o
 nível 3 de maturidade e pode ser considerada uma API RESTful.
+
+### 4.2.7. Melhorias na API
+
+Mesmo agora a API de produtos podendo já ser considerada uma API RESTful,
+há alguns pontos que podem ser implementados como melhorias e também
+como aprendizado. Um desses pontos é inserir e configurar a paginação no
+retorno da listagem de produtos da API, incluindo parâmetros como size,
+page e sort, deixando a API mais dinâmica e flexível para o consumo dos
+clientes.
+É importante também inserir uma validação nos dados de entrada da API,
+utilizando por exemplo o Spring Validation com anotations como @NotNull,
+@NotBlanck, @Size, entre outros e trabalhar o uso de DTOs (Data Transfer
+Object).
+Outro ponto de melhoria é incluir filtros e parâmetros na API possibilitando o
+cliente buscar os recursos de acordo com atributos e valores específicos e
+caso haja datas/hora na API, é uma boa prática a padronização de datas
+de forma global, utilizando a ISO 8601 UTC por exemplo, que pode ser
+implementada a nível de atributo, classe ou aplicação. E por fim, para isolar
+as regras de negócio da camada de controller, trabalhar com classes
+Services para isso.
+Como complemento, muitas dessas melhorias citadas foram implementadas
+na prática no Spring Boot | Curso Completo 2022 que pode ser acessado pelo
+link: https://youtu.be/LXRU-Z36GEU.
