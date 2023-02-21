@@ -10,10 +10,13 @@ import org.springframework.stereotype.Controller;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
+
 import javax.swing.text.html.Option;
 import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
+
+import static org.springframework.hateoas.server.mvc.WebMvcLinkBuilder.*;
 
 @Controller
 public class ProductController {
@@ -21,18 +24,41 @@ public class ProductController {
     @Autowired
     ProductRepository productRepository;
 
+//    @GetMapping("/products")
+//    public ResponseEntity<List<ProductModel>> getAllProducts() {
+//        return new ResponseEntity<List<ProductModel>>(productRepository.findAll(), HttpStatus.OK);
+//    }
+    // HATEOAS GET ALL
     @GetMapping("/products")
     public ResponseEntity<List<ProductModel>> getAllProducts() {
-        return new ResponseEntity<List<ProductModel>>(productRepository.findAll(), HttpStatus.OK);
+        List<ProductModel> productsList = productRepository.findAll();
+
+        if(!productsList.isEmpty()) {
+            for(ProductModel product : productsList) {
+                UUID id = product.getIdProduct();
+                product.add(linkTo(methodOn(ProductController.class).getOneProduct(id)).withSelfRel());
+            }
+        }
+        return new ResponseEntity<List<ProductModel>>(productsList, HttpStatus.OK);
     }
 
+//    @GetMapping("/products/{id}")
+//    public ResponseEntity<ProductModel> getOneProduct(@PathVariable(value = "id") UUID id) {
+//        Optional<ProductModel> productO = productRepository.findById(id);
+//
+//        if(productO.isEmpty()) {
+//            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+//        }
+//        return new ResponseEntity<ProductModel>(productO.get(), HttpStatus.OK);
+//    }
+    // HATEOAS GET BY ID
     @GetMapping("/products/{id}")
     public ResponseEntity<ProductModel> getOneProduct(@PathVariable(value = "id") UUID id) {
         Optional<ProductModel> productO = productRepository.findById(id);
-
-        if(productO.isEmpty()) {
+        if (productO.isEmpty()) {
             return new ResponseEntity<>(HttpStatus.NOT_FOUND);
         }
+        productO.get().add(linkTo(methodOn(ProductController.class).getAllProducts()).withRel("Products List"));
         return new ResponseEntity<ProductModel>(productO.get(), HttpStatus.OK);
     }
 

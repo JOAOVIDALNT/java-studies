@@ -362,3 +362,120 @@ public ResponseEntity<ProductModel> updateProduct(@PathVariable(value="id") UUID
 Agora para que essa API de Produtos possa ser considerada uma API RESTful
 e atingir o nível 3 da maturidade de Richardson, é preciso inserir as hipermídias
 (HATEOAS).
+
+### 4.2.6. Inserindo as HATEOAS
+
+Para implementar as HATEOAS na API é preciso inserir mais uma dependência
+no arquivo pom.xml do projeto, como mostra o código abaixo.
+
+Exemplo 21: Dependências das HATEOAS
+<dependency>
+    <groupId>org.springframework.boot</groupId>
+    <artifactId>spring-boot-starter-hateoas</artifactId>
+</dependency>
+
+De acordo com o modelo de Maturidade de Richardson, uma API deve possuir
+as hipermídias que mostram o seu estado atual e seu relacionamento com os
+elementos ou estados futuros para que seja então considerada RESTful.
+Assim, para que essa API atinja este nível, o recurso Product deve apresentar
+os seus atributos e também os links, onde será mostrado o caminho de
+relacionamento com os demais elementos.
+Para isso, na entidade ProductModel é preciso estender
+RepresentationModel para que através do seu método add() a classe
+ProductModel exiba o link das demais URI’s relacionadas, como mostra o
+código abaixo.
+
+Exemplo 22: ProductModel extends RepresentationModel
+@Entity
+@Table(name = "TB_PRODUCTS")
+public class ProductModel extends RepresentationModel<ProductModel> implements Serializable {
+    private static final long serialVersionUID = 1L;
+    @Id
+    @GeneratedValue(strategy=GenerationType.AUTO)
+
+    private UUID idProduct;
+    private String name;
+    private BigDecimal value;
+    public UUID getIdProduct() {
+    return idProduct;
+    }
+    public void setIdProduct(UUID idProduct) {
+    this.idProduct = idProduct;
+    }
+...
+}
+
+Quando uma requisição for solicitada para retornar uma lista de produtos ou
+um determinado produto é preciso definir o link que será adicionado em cada
+caso e construí-lo dentro dos métodos do controller e então, adicioná-lo a
+cada produto.
+Para isso, pode ser utilizado o método linkTo(), o qual irá construir uma URI de
+acordo com o controller e o método definido, methodOn() faz o mapeamento
+do método de destino da chamada e withSelfRel() e withRel() criam um auto
+link de acordo com a relação.
+Cada link criado deve ser inserido no produto através do método add(), como
+pode ser observado nos códigos abaixo.
+
+Exemplo 23: Criando e adicionando o link para a listagem de produtos.
+@GetMapping("/products")
+public ResponseEntity<List<ProductModel>> getAllProducts() {
+    List<ProductModel> productsList = productRepository.findAll();
+    if(!productsList.isEmpty()) {
+        for(ProductModel product : productsList) {
+            UUID id = product.getIdProduct();
+            product.add(linkTo(methodOn(ProductController.class).getOneProduct(id)).withSelfRel());
+        }   
+    }
+    return new
+    ResponseEntity<List<ProductModel>>(productsList,
+    HttpStatus.OK);
+}
+
+Exemplo 24: Criando e adicionando o link para um único produto.
+@GetMapping("/products/{id}")
+public ResponseEntity<ProductModel> getOneProduct(@PathVariable(value="id") UUID id) {
+    Optional<ProductModel> productO = productRepository.findById(id);
+    if(productO.isEmpty()) {
+        return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+    }
+    productO.get().add(linkTo(methodOn(ProductController.class).getAllProducts()).withRel("Products List"));
+    return new ResponseEntity<ProductModel>(productO.get(), HttpStatus.OK);
+}
+
+Ao enviar uma requisição ao servidor solicitando a listagem de produtos,
+agora além dos atributos de ProductModel, também será retornado o link que
+mostra o caminho e relacionamento para acessar cada produto
+individualmente, através da url http://localhost:8080/products/{id}.
+
+ {
+        "idProduct": "d1a135f3-625d-4540-a83c-2d16a6ab4c1b",
+        "name": "Notebook",
+        "value": 3899.99,
+        "links": [
+            {
+                "rel": "self",
+                "href": "http://localhost:8080/products/d1a135f3-625d-4540-a83c-2d16a6ab4c1b"
+            }
+        ]
+    },
+
+E da mesma maneira, ao enviar uma requisição ao servidor solicitando um
+determinado produto pelo id, será retornado o link mostrando o caminho
+completo para o acesso e retorno a listagem de produtos
+http://localhost:8080/products, como pode ser visualizado na imagem
+abaixo.
+
+{
+    "idProduct": "689b888d-cf61-47b7-973d-22e4f004690e",
+    "name": "Tablet ATUALIZADO",
+    "value": 659.99,
+    "_links": {
+        "Products List": {
+            "href": "http://localhost:8080/products"
+        }
+    }
+}
+
+Agora sim, com a inserção das HATEOAS na aplicação e feita as
+configurações necessárias, pode-se dizer que a API de produtos atingiu o
+nível 3 de maturidade e pode ser considerada uma API RESTful.
