@@ -155,7 +155,7 @@ Na configuração por XML, não muito utilizada hoje em dia, é preciso definir
 tags <bean> dentro de uma tag principal <beans> passando o path da
 classe, assim o Spring saberá quais classes ele irá gerenciar a criação de
 instâncias e a injeção de suas dependências.
-
+#
 <?xml version="1.0" encoding="UTF-8>
 <beans xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
 xmlns="http://www.springframework.org/schema/beans"
@@ -168,20 +168,20 @@ http://www.springframework.org/schema/beans/spring-beans.xsd">
 <bean class="com.example.springboot.ProdutoRepository">
 
 </beans>
-
+#
 Na configuração por anotações, é possível utilizar os estereótipos do Spring
 para determinar de forma mais objetiva e específica qual o tipo de bean será
 cada classe. Há quatro principais tipos:
-
+#
 • @Component;
 • @Service;
 • @Controller;
 • @Repository.
-
+#
 Assim, ao anotar determinada classe com algum desses estereótipos, o
 Spring entende que tal classe é um bean e será gerenciada por ele. Abaixo
 seguem alguns exemplos de beans utilizando configuração por anotações.
-
+#
 Exemplo 1: Bean do tipo Component
 @Component
 public class Product {
@@ -189,32 +189,32 @@ public class Product {
     private BigDecimal value;
     //... getters and setters
 }
-
+#
 Exemplo 2: Bean do tipo Service
 @Service
 public class ProductService {
     // business rules
 }
-
+#
 Exemplo 3: Bean do tipo Controller
 @Controller
 public class ProductController {
     // ... GET, POST, DELETE, UPDATE methods
 }
-
+#
 Exemplo 4: Bean do tipo Repository
 @Repository
 public class ProductRepository {
     // database transaction methods
 }
-
+#
 Considerando que os beans gerenciados pelo Spring já foram definidos a
 próxima questão é entender como o Spring saberá onde injetar as instâncias
 que ele irá criar com suas dependências. Para isso é preciso criar os pontos
 de injeção, que consistem em uma maneira de entregar as dependências ao
 objeto que necessita. Os dois tipos de pontos de injeção mais comuns são os
 construtores e setters, os quais podem ser visualizados nos exemplos abaixo.
-
+#
 Exemplo 5: Ponto de Injeção pelo método Construtor
 @Service
 public class ProductService {
@@ -225,7 +225,7 @@ public class ProductService {
     }
 // business rules
 }
-
+#
 Exemplo 6: Ponto de Injeção pelo método Setter
 @Service
 public class ProductService {
@@ -235,11 +235,11 @@ public class ProductService {
     }
 // business rules
 }
-
+#
 Dentro do Spring, há uma outra maneira de se criar pontos de injeção de
 forma automática, utilizando a anotação @Autowired, como mostra o
 Exemplo 7.
-
+#
 Exemplo 7: Ponto de Injeção utilizando @Autowired
 @Service
 public class ProductService {
@@ -247,11 +247,11 @@ public class ProductService {
     private ProductRepository productRepository;
     // business rules
 }
-
+#
 O ciclo de vida de um bean depende do seu escopo, que pode ser
 determinado no Spring através da anotação @Scope. Os tipos de escopos
 do Spring utilizados para web são:
-
+#
 • Singleton;
 • Prototype;
 • Request;
@@ -265,9 +265,9 @@ instancias, uma para cada solicitação. O bean com escopo do tipo request
 terá uma instancia criada para cada solicitação HTTP e por fim, o bean com
 escopo session terá sua instancia preservada e utilizada pelas solicitações
 enquanto durar a sessão.
-
+#
 2.7. @Bean - Métodos Produtores
-
+#
 Quando é preciso que uma classe externa da aplicação seja um bean
 gerenciado pelo Spring, é preciso primeiramente criar um método produtor
 dentro da classe de configuração do Spring, que irá retornar tal classe
@@ -275,7 +275,7 @@ externa que será gerenciada pelo container do Spring. E para configurar essa
 classe como sendo um bean, é preciso anotar tal método com @Bean, assim
 é possível criar pontos de injeção e o Spring irá controlá-la como sendo
 qualquer outro bean dentro da aplicação.
-
+#
 Exemplo 8: Método produtor com @Bean
 @Configuration
 public class AppConfig {
