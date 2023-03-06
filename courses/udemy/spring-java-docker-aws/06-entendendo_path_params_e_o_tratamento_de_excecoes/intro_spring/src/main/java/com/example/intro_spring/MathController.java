@@ -14,6 +14,47 @@ public class MathController {
         return convertToDouble(numberOne) + convertToDouble(numberTwo);
     }
 
+    @RequestMapping(value = "/mul/{numberOne}/{numberTwo}", method = RequestMethod.GET)
+    public Double mul(@PathVariable(value = "numberOne") String numberOne,
+                      @PathVariable(value = "numberTwo") String numberTwo) throws Exception{
+        if (!isNumeric(numberOne) || !isNumeric(numberTwo)) {
+            throw new UnsupportedOperationException("Please set a numeric value!");
+        }
+
+        return convertToDouble(numberOne) * convertToDouble(numberTwo);
+    }
+
+    @RequestMapping(value = "/div/{numberOne}/{numberTwo}", method = RequestMethod.GET)
+    public Double div(@PathVariable(value = "numberOne") String numberOne,
+                      @PathVariable(value = "numberTwo") String numberTwo) throws Exception{
+        if (!isNumeric(numberOne) || !isNumeric(numberTwo)) {
+            throw new UnsupportedOperationException("Please set a numeric value!");
+        }
+
+        return convertToDouble(numberOne) / convertToDouble(numberTwo);
+    }
+
+    @RequestMapping(value = "/avg/{numberOne}/{numberTwo}", method = RequestMethod.GET)
+    public Double avg(@PathVariable(value = "numberOne") String numberOne,
+                      @PathVariable(value = "numberTwo") String numberTwo) throws Exception{
+        if (!isNumeric(numberOne) || !isNumeric(numberTwo)) {
+            throw new UnsupportedOperationException("Please set a numeric value!");
+        }
+
+        return convertToDouble(numberOne) + convertToDouble(numberTwo) / 2;
+    }
+
+    @RequestMapping(value = "/sqrt/{numberOne}/{numberTwo}", method = RequestMethod.GET)
+    public Double sqrt(@PathVariable(value = "numberOne") String numberOne,
+                      @PathVariable(value = "numberTwo") String numberTwo) throws Exception{
+        if (!isNumeric(numberOne) || !isNumeric(numberTwo)) {
+            throw new UnsupportedOperationException("Please set a numeric value!");
+        }
+
+        return Math.sqrt(convertToDouble(numberOne) + convertToDouble(numberTwo));
+    }
+
+
     private boolean isNumeric(String strNumber) {
         if(strNumber == null) return false;
         String number = strNumber.replaceAll(",",".");
