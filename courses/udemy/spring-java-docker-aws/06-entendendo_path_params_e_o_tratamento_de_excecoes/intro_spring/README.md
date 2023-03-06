@@ -8,3 +8,8 @@ Ao utilizar query params em uma aplicação de uma calculadora, por exemplo, ser
 > exemplo de path param: http://localhost:8080/sum/2/7
 
 - quando o valor é opicional e se eu não passar não vou quebrar a aplicação, utilizamos query params (ou query string) caso o contrário, utilizamos path params
+- 
+### Path Variable e Request Mapping
+> Request Mapping -> anotação do spring mvc para recuperar dados da url 
+> 
+> Path Variable -> utilizada para recuperar dados da url, permite que o controller lide com as requisições de url parametrizadas
