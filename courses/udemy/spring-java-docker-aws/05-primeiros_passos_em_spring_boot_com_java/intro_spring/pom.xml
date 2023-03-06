@@ -5,14 +5,14 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>3.0.3</version>
+        <version>3.0.4</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>com.joaovidal</groupId>
-    <artifactId>spring-concepts</artifactId>
+    <groupId>com.example</groupId>
+    <artifactId>intro_spring</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>spring-concepts</name>
-    <description>spring-concepts</description>
+    <name>intro_spring</name>
+    <description>intro_spring</description>
     <properties>
         <java.version>17</java.version>
     </properties>

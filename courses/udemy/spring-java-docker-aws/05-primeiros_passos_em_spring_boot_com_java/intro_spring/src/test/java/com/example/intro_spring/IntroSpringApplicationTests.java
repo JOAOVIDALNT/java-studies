@@ -1,10 +1,10 @@
-package com.joaovidal.springconcepts;
+package com.example.intro_spring;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class MainTests {
+class IntroSpringApplicationTests {
 
     @Test
     void contextLoads() {

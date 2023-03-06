@@ -1,15 +1,15 @@
-package com.joaovidal.springconcepts;
+package com.example.intro_spring;
 
 public class Greeting {
-    private long id;
+    private Long id;
     private String content;
 
-    public Greeting(long id, String content) {
+    public Greeting(Long id, String content) {
         this.id = id;
         this.content = content;
     }
 
-    public long getId() {
+    public Long getId() {
         return id;
     }
 
