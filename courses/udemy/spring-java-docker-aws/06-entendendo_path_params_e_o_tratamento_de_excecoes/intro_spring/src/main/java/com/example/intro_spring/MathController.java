@@ -44,14 +44,13 @@ public class MathController {
         return convertToDouble(numberOne) + convertToDouble(numberTwo) / 2;
     }
 
-    @RequestMapping(value = "/sqrt/{numberOne}/{numberTwo}", method = RequestMethod.GET)
-    public Double sqrt(@PathVariable(value = "numberOne") String numberOne,
-                      @PathVariable(value = "numberTwo") String numberTwo) throws Exception{
-        if (!isNumeric(numberOne) || !isNumeric(numberTwo)) {
+    @RequestMapping(value = "/sqrt/{number}", method = RequestMethod.GET)
+    public Double sqrt(@PathVariable(value = "number") String number) throws Exception{
+        if (!isNumeric(number)) {
             throw new UnsupportedOperationException("Please set a numeric value!");
         }
 
-        return Math.sqrt(convertToDouble(numberOne) + convertToDouble(numberTwo));
+        return Math.sqrt(convertToDouble(number));
     }
 
 
