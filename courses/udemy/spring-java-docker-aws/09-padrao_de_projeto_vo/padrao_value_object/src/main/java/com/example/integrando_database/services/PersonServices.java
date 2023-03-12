@@ -1,6 +1,8 @@
 package com.example.integrando_database.services;
 
+import com.example.integrando_database.data.vo.v1.PersonVO;
 import com.example.integrando_database.exceptions.ResourceNotFoundException;
+import com.example.integrando_database.mapper.DozerMapper;
 import com.example.integrando_database.models.Person;
 import com.example.integrando_database.repositories.PersonRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,24 +20,29 @@ public class PersonServices {
     PersonRepository repository;
 
 
-    public List<Person> findAll() {
+    public List<PersonVO> findAll() {
         logger.info("Finding all");
-        return repository.findAll();
+        return DozerMapper.parseListObjects(repository.findAll(), PersonVO.class);
     }
 
 
-    public Person findById(Long id) {
+    public PersonVO findById(Long id) {
         logger.info("Finding one person!");
-        return repository.findById(id)
+        var entity = repository.findById(id)
                 .orElseThrow(() -> new ResourceNotFoundException("No records found for this id"));
+        return DozerMapper.parseObject(entity, PersonVO.class);
     }
 
-    public Person create(Person person) {
+    public PersonVO create(PersonVO person) {
         logger.info("creating one person");
-        return  repository.save(person);
+
+        var entity = DozerMapper.parseObject(person, Person.class);
+        var vo = DozerMapper.parseObject(repository.save(entity), PersonVO.class);
+
+        return vo;
     }
 
-    public Person update(Person person) {
+    public PersonVO update(PersonVO person) {
 
         logger.info("Updating one person");
 
@@ -47,7 +54,9 @@ public class PersonServices {
         entity.setGender(person.getGender());
         entity.setAddress(person.getAddress());
 
-        return repository.save(person);
+        var vo = DozerMapper.parseObject(repository.save(entity), PersonVO.class);
+
+        return vo;
     }
 
     public void delete(Long id) {
