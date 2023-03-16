@@ -7,7 +7,7 @@ I hope y'll enjoy
 
 <h3 align="center">Sumary</h3>
 <p align="center">
- <a href="https://github.com/JOAOVIDALNT/java-studies/tree/main/udemy-Java">Java Udemy Course by: Nélio Alves</a>
+ 
 </p>  
 
 
