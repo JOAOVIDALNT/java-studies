@@ -1,16 +1,19 @@
 package com.example.integrando_database.data.vo.v1;
 
 import com.example.integrando_database.models.Person;
+import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonPropertyOrder;
 import com.github.dozermapper.core.Mapping;
 import org.springframework.hateoas.RepresentationModel;
 
 
 import java.io.Serializable;
 import java.util.Objects;
-
+@JsonPropertyOrder({"id", "firstName", "lastName", "address", "gender"})
 public class PersonVO extends RepresentationModel<PersonVO> implements Serializable {
 
     @Mapping("id")
+    @JsonProperty("id") // necessita do order property pois o id passa a ser processado por ultimo e fica embaixo na requisição
     private Long key;
     private String firstName;
     private String lastName;
