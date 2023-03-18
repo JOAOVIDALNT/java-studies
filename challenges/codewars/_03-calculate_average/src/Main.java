@@ -7,11 +7,7 @@ public class Main {
     }
 
     public static double find_average(int[] array) {
-//         Arrays.stream(array).average();
-        double sum = 0;
-        for(int i = 0; i < array.length; i++) {
-            sum += array[i];
-        }
-        return sum / array.length;
+         return Arrays.stream(array).average().orElse(0);
+
     }
 }
