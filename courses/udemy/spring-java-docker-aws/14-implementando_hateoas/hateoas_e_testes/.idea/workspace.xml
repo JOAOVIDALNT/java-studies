@@ -1,0 +1,399 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="3443f45c-4036-4c03-9fae-1a7d6a19fd94" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../../05-primeiros_passos_em_spring_boot_com_java/.vscode/launch.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../05-primeiros_passos_em_spring_boot_com_java/@Controller_x_@RestController.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../05-primeiros_passos_em_spring_boot_com_java/intro_spring/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../05-primeiros_passos_em_spring_boot_com_java/intro_spring/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../05-primeiros_passos_em_spring_boot_com_java/intro_spring/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../05-primeiros_passos_em_spring_boot_com_java/intro_spring/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../05-primeiros_passos_em_spring_boot_com_java/intro_spring/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../05-primeiros_passos_em_spring_boot_com_java/intro_spring/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../05-primeiros_passos_em_spring_boot_com_java/intro_spring/src/main/java/com/example/intro_spring/Controller.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../05-primeiros_passos_em_spring_boot_com_java/intro_spring/src/main/java/com/example/intro_spring/Greeting.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../05-primeiros_passos_em_spring_boot_com_java/intro_spring/src/main/java/com/example/intro_spring/IntroSpringApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../05-primeiros_passos_em_spring_boot_com_java/intro_spring/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../05-primeiros_passos_em_spring_boot_com_java/intro_spring/src/test/java/com/example/intro_spring/IntroSpringApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../06-entendendo_path_params_e_o_tratamento_de_excecoes/.vscode/launch.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../06-entendendo_path_params_e_o_tratamento_de_excecoes/@Controller_x_@RestController.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../06-entendendo_path_params_e_o_tratamento_de_excecoes/exercise-refactoring/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../06-entendendo_path_params_e_o_tratamento_de_excecoes/exercise-refactoring/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../06-entendendo_path_params_e_o_tratamento_de_excecoes/exercise-refactoring/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../06-entendendo_path_params_e_o_tratamento_de_excecoes/exercise-refactoring/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../06-entendendo_path_params_e_o_tratamento_de_excecoes/exercise-refactoring/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../06-entendendo_path_params_e_o_tratamento_de_excecoes/exercise-refactoring/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../06-entendendo_path_params_e_o_tratamento_de_excecoes/exercise-refactoring/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../06-entendendo_path_params_e_o_tratamento_de_excecoes/exercise-refactoring/src/main/java/com/example/intro_spring/IntroSpringApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../06-entendendo_path_params_e_o_tratamento_de_excecoes/exercise-refactoring/src/main/java/com/example/intro_spring/controllers/MathController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../06-entendendo_path_params_e_o_tratamento_de_excecoes/exercise-refactoring/src/main/java/com/example/intro_spring/exceptions/ExceptionResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../06-entendendo_path_params_e_o_tratamento_de_excecoes/exercise-refactoring/src/main/java/com/example/intro_spring/exceptions/UnsupportedMathOperationException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../06-entendendo_path_params_e_o_tratamento_de_excecoes/exercise-refactoring/src/main/java/com/example/intro_spring/exceptions/handler/CustomizedResponseEntityExceptionHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../06-entendendo_path_params_e_o_tratamento_de_excecoes/exercise-refactoring/src/main/java/com/example/intro_spring/models/Calculator.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../06-entendendo_path_params_e_o_tratamento_de_excecoes/exercise-refactoring/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../06-entendendo_path_params_e_o_tratamento_de_excecoes/exercise-refactoring/src/test/java/com/example/intro_spring/IntroSpringApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../06-entendendo_path_params_e_o_tratamento_de_excecoes/intro_spring/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../06-entendendo_path_params_e_o_tratamento_de_excecoes/intro_spring/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../06-entendendo_path_params_e_o_tratamento_de_excecoes/intro_spring/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../06-entendendo_path_params_e_o_tratamento_de_excecoes/intro_spring/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../06-entendendo_path_params_e_o_tratamento_de_excecoes/intro_spring/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../06-entendendo_path_params_e_o_tratamento_de_excecoes/intro_spring/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../06-entendendo_path_params_e_o_tratamento_de_excecoes/intro_spring/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../06-entendendo_path_params_e_o_tratamento_de_excecoes/intro_spring/src/main/java/com/example/intro_spring/IntroSpringApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../06-entendendo_path_params_e_o_tratamento_de_excecoes/intro_spring/src/main/java/com/example/intro_spring/MathController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../06-entendendo_path_params_e_o_tratamento_de_excecoes/intro_spring/src/main/java/com/example/intro_spring/exceptions/ExceptionResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../06-entendendo_path_params_e_o_tratamento_de_excecoes/intro_spring/src/main/java/com/example/intro_spring/exceptions/UnsupportedMathOperationException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../06-entendendo_path_params_e_o_tratamento_de_excecoes/intro_spring/src/main/java/com/example/intro_spring/exceptions/handler/CustomizedResponseEntityExceptionHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../06-entendendo_path_params_e_o_tratamento_de_excecoes/intro_spring/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../06-entendendo_path_params_e_o_tratamento_de_excecoes/intro_spring/src/test/java/com/example/intro_spring/IntroSpringApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../07-como_usar_os_verbos_http/verbos_http/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../07-como_usar_os_verbos_http/verbos_http/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../07-como_usar_os_verbos_http/verbos_http/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../07-como_usar_os_verbos_http/verbos_http/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../07-como_usar_os_verbos_http/verbos_http/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../07-como_usar_os_verbos_http/verbos_http/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../07-como_usar_os_verbos_http/verbos_http/src/main/java/com/example/verbos_http/VerbosHttpApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../07-como_usar_os_verbos_http/verbos_http/src/main/java/com/example/verbos_http/controllers/PersonController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../07-como_usar_os_verbos_http/verbos_http/src/main/java/com/example/verbos_http/models/Person.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../07-como_usar_os_verbos_http/verbos_http/src/main/java/com/example/verbos_http/services/PersonServices.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../07-como_usar_os_verbos_http/verbos_http/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../07-como_usar_os_verbos_http/verbos_http/src/test/java/com/example/verbos_http/VerbosHttpApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../08-integrando_com_o_mysql/integrando_database/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../08-integrando_com_o_mysql/integrando_database/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../08-integrando_com_o_mysql/integrando_database/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../08-integrando_com_o_mysql/integrando_database/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../08-integrando_com_o_mysql/integrando_database/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../08-integrando_com_o_mysql/integrando_database/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../08-integrando_com_o_mysql/integrando_database/src/main/java/com/example/integrando_database/IntegrandoDatabaseApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../08-integrando_com_o_mysql/integrando_database/src/main/java/com/example/integrando_database/controllers/PersonController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../08-integrando_com_o_mysql/integrando_database/src/main/java/com/example/integrando_database/exceptions/ExceptionResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../08-integrando_com_o_mysql/integrando_database/src/main/java/com/example/integrando_database/exceptions/ResourceNotFoundException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../08-integrando_com_o_mysql/integrando_database/src/main/java/com/example/integrando_database/exceptions/handler/CustomizedResponseEntityExceptionHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../08-integrando_com_o_mysql/integrando_database/src/main/java/com/example/integrando_database/models/Person.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../08-integrando_com_o_mysql/integrando_database/src/main/java/com/example/integrando_database/repositories/PersonRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../08-integrando_com_o_mysql/integrando_database/src/main/java/com/example/integrando_database/services/PersonServices.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../08-integrando_com_o_mysql/integrando_database/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../08-integrando_com_o_mysql/integrando_database/src/test/java/com/example/integrando_database/IntegrandoDatabaseApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../09-padrao_de_projeto_vo/padrao_value_object/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../09-padrao_de_projeto_vo/padrao_value_object/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../09-padrao_de_projeto_vo/padrao_value_object/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../09-padrao_de_projeto_vo/padrao_value_object/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../09-padrao_de_projeto_vo/padrao_value_object/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../09-padrao_de_projeto_vo/padrao_value_object/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../09-padrao_de_projeto_vo/padrao_value_object/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../09-padrao_de_projeto_vo/padrao_value_object/src/main/java/com/example/integrando_database/IntegrandoDatabaseApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../09-padrao_de_projeto_vo/padrao_value_object/src/main/java/com/example/integrando_database/controllers/PersonController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../09-padrao_de_projeto_vo/padrao_value_object/src/main/java/com/example/integrando_database/data/vo/v1/PersonVO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../09-padrao_de_projeto_vo/padrao_value_object/src/main/java/com/example/integrando_database/exceptions/ExceptionResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../09-padrao_de_projeto_vo/padrao_value_object/src/main/java/com/example/integrando_database/exceptions/ResourceNotFoundException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../09-padrao_de_projeto_vo/padrao_value_object/src/main/java/com/example/integrando_database/exceptions/handler/CustomizedResponseEntityExceptionHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../09-padrao_de_projeto_vo/padrao_value_object/src/main/java/com/example/integrando_database/mapper/DozerMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../09-padrao_de_projeto_vo/padrao_value_object/src/main/java/com/example/integrando_database/models/Person.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../09-padrao_de_projeto_vo/padrao_value_object/src/main/java/com/example/integrando_database/repositories/PersonRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../09-padrao_de_projeto_vo/padrao_value_object/src/main/java/com/example/integrando_database/services/PersonServices.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../09-padrao_de_projeto_vo/padrao_value_object/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../09-padrao_de_projeto_vo/padrao_value_object/src/test/java/com/example/integrando_database/IntegrandoDatabaseApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../09-padrao_de_projeto_vo/padrao_value_object/src/test/java/com/example/integrando_database/unittests/mapper/DozerConverterTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../09-padrao_de_projeto_vo/padrao_value_object/src/test/java/com/example/integrando_database/unittests/mocks/MockPerson.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../10-versionamento_de_api/versionando_api/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../10-versionamento_de_api/versionando_api/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../10-versionamento_de_api/versionando_api/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../10-versionamento_de_api/versionando_api/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../10-versionamento_de_api/versionando_api/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../10-versionamento_de_api/versionando_api/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../10-versionamento_de_api/versionando_api/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../10-versionamento_de_api/versionando_api/src/main/java/com/example/integrando_database/IntegrandoDatabaseApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../10-versionamento_de_api/versionando_api/src/main/java/com/example/integrando_database/controllers/PersonController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../10-versionamento_de_api/versionando_api/src/main/java/com/example/integrando_database/data/vo/v1/PersonVO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../10-versionamento_de_api/versionando_api/src/main/java/com/example/integrando_database/data/vo/v2/PersonVOv2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../10-versionamento_de_api/versionando_api/src/main/java/com/example/integrando_database/exceptions/ExceptionResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../10-versionamento_de_api/versionando_api/src/main/java/com/example/integrando_database/exceptions/ResourceNotFoundException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../10-versionamento_de_api/versionando_api/src/main/java/com/example/integrando_database/exceptions/handler/CustomizedResponseEntityExceptionHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../10-versionamento_de_api/versionando_api/src/main/java/com/example/integrando_database/mapper/DozerMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../10-versionamento_de_api/versionando_api/src/main/java/com/example/integrando_database/mapper/custom/PersonMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../10-versionamento_de_api/versionando_api/src/main/java/com/example/integrando_database/models/Person.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../10-versionamento_de_api/versionando_api/src/main/java/com/example/integrando_database/repositories/PersonRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../10-versionamento_de_api/versionando_api/src/main/java/com/example/integrando_database/services/PersonServices.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../10-versionamento_de_api/versionando_api/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../10-versionamento_de_api/versionando_api/src/test/java/com/example/integrando_database/IntegrandoDatabaseApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../10-versionamento_de_api/versionando_api/src/test/java/com/example/integrando_database/unittests/mapper/DozerConverterTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../10-versionamento_de_api/versionando_api/src/test/java/com/example/integrando_database/unittests/mocks/MockPerson.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../11-adicionando_suporte_a_migrations/migrations_com_flyway/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../11-adicionando_suporte_a_migrations/migrations_com_flyway/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../11-adicionando_suporte_a_migrations/migrations_com_flyway/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../11-adicionando_suporte_a_migrations/migrations_com_flyway/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../11-adicionando_suporte_a_migrations/migrations_com_flyway/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../11-adicionando_suporte_a_migrations/migrations_com_flyway/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../11-adicionando_suporte_a_migrations/migrations_com_flyway/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../11-adicionando_suporte_a_migrations/migrations_com_flyway/src/main/java/com/example/integrando_database/IntegrandoDatabaseApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../11-adicionando_suporte_a_migrations/migrations_com_flyway/src/main/java/com/example/integrando_database/controllers/PersonController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../11-adicionando_suporte_a_migrations/migrations_com_flyway/src/main/java/com/example/integrando_database/data/vo/v1/PersonVO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../11-adicionando_suporte_a_migrations/migrations_com_flyway/src/main/java/com/example/integrando_database/exceptions/ExceptionResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../11-adicionando_suporte_a_migrations/migrations_com_flyway/src/main/java/com/example/integrando_database/exceptions/ResourceNotFoundException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../11-adicionando_suporte_a_migrations/migrations_com_flyway/src/main/java/com/example/integrando_database/exceptions/handler/CustomizedResponseEntityExceptionHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../11-adicionando_suporte_a_migrations/migrations_com_flyway/src/main/java/com/example/integrando_database/mapper/DozerMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../11-adicionando_suporte_a_migrations/migrations_com_flyway/src/main/java/com/example/integrando_database/models/Person.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../11-adicionando_suporte_a_migrations/migrations_com_flyway/src/main/java/com/example/integrando_database/repositories/PersonRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../11-adicionando_suporte_a_migrations/migrations_com_flyway/src/main/java/com/example/integrando_database/services/PersonServices.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../11-adicionando_suporte_a_migrations/migrations_com_flyway/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../11-adicionando_suporte_a_migrations/migrations_com_flyway/src/main/resources/db/migration/V1__Create_Table_Person.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../11-adicionando_suporte_a_migrations/migrations_com_flyway/src/main/resources/db/migration/V2__Populate_Table_Person.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../11-adicionando_suporte_a_migrations/migrations_com_flyway/src/test/java/com/example/integrando_database/IntegrandoDatabaseApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../11-adicionando_suporte_a_migrations/migrations_com_flyway/src/test/java/com/example/integrando_database/unittests/mapper/DozerConverterTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../11-adicionando_suporte_a_migrations/migrations_com_flyway/src/test/java/com/example/integrando_database/unittests/mocks/MockPerson.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../12-serializacao_customizada_json/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../13-content_negotioation/content_negotiation/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../13-content_negotioation/content_negotiation/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../13-content_negotioation/content_negotiation/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../13-content_negotioation/content_negotiation/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../13-content_negotioation/content_negotiation/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../13-content_negotioation/content_negotiation/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../13-content_negotioation/content_negotiation/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../13-content_negotioation/content_negotiation/src/main/java/com/example/integrando_database/IntegrandoDatabaseApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../13-content_negotioation/content_negotiation/src/main/java/com/example/integrando_database/config/WebConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../13-content_negotioation/content_negotiation/src/main/java/com/example/integrando_database/controllers/PersonController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../13-content_negotioation/content_negotiation/src/main/java/com/example/integrando_database/data/vo/v1/PersonVO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../13-content_negotioation/content_negotiation/src/main/java/com/example/integrando_database/exceptions/ExceptionResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../13-content_negotioation/content_negotiation/src/main/java/com/example/integrando_database/exceptions/ResourceNotFoundException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../13-content_negotioation/content_negotiation/src/main/java/com/example/integrando_database/exceptions/handler/CustomizedResponseEntityExceptionHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../13-content_negotioation/content_negotiation/src/main/java/com/example/integrando_database/mapper/DozerMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../13-content_negotioation/content_negotiation/src/main/java/com/example/integrando_database/models/Person.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../13-content_negotioation/content_negotiation/src/main/java/com/example/integrando_database/repositories/PersonRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../13-content_negotioation/content_negotiation/src/main/java/com/example/integrando_database/serialization/converter/YamlJackson2HttppMessageConverter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../13-content_negotioation/content_negotiation/src/main/java/com/example/integrando_database/services/PersonServices.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../13-content_negotioation/content_negotiation/src/main/java/com/example/integrando_database/util/MediaType.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../13-content_negotioation/content_negotiation/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../13-content_negotioation/content_negotiation/src/main/resources/db/migration/V1__Create_Table_Person.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../13-content_negotioation/content_negotiation/src/main/resources/db/migration/V2__Populate_Table_Person.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../13-content_negotioation/content_negotiation/src/test/java/com/example/integrando_database/IntegrandoDatabaseApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../13-content_negotioation/content_negotiation/src/test/java/com/example/integrando_database/unittests/mapper/DozerConverterTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../13-content_negotioation/content_negotiation/src/test/java/com/example/integrando_database/unittests/mocks/MockPerson.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.jar" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/integrando_database/IntegrandoDatabaseApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/integrando_database/config/WebConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/integrando_database/controllers/PersonController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/integrando_database/data/vo/v1/PersonVO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/integrando_database/exceptions/ExceptionResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/integrando_database/exceptions/ResourceNotFoundException.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/integrando_database/exceptions/handler/CustomizedResponseEntityExceptionHandler.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/integrando_database/mapper/DozerMapper.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/integrando_database/models/Person.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/integrando_database/repositories/PersonRepository.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/integrando_database/serialization/converter/YamlJackson2HttppMessageConverter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/integrando_database/services/PersonServices.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/integrando_database/util/MediaType.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/db/migration/V1__Create_Table_Person.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/db/migration/V2__Populate_Table_Person.sql" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/integrando_database/IntegrandoDatabaseApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/integrando_database/unittests/mapper/DozerConverterTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/integrando_database/unittests/mockito/services/PersonServicesTest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/example/integrando_database/unittests/mocks/MockPerson.java" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="JUnit5 Test Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../../.." />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHome" value="Use Maven wrapper" />
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+    <option name="importingSettings">
+      <MavenImportingSettings>
+        <option name="workspaceImportEnabled" value="true" />
+      </MavenImportingSettings>
+    </option>
+  </component>
+  <component name="ProjectId" id="2N6ByOS5GqCnsywPFvMzllRvXbw" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RequestMappingsPanelOrder0": "0",
+    "RequestMappingsPanelOrder1": "1",
+    "RequestMappingsPanelWidth0": "75",
+    "RequestMappingsPanelWidth1": "75",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrary": "JUnit5",
+    "com.intellij.testIntegration.createTest.CreateTestDialog.defaultLibrarySuperClass.JUnit5": "",
+    "last_opened_file_path": "/home/joao/dev/java/java-studies/courses/udemy/spring-intro/14-implementando_hateoas/hateoas",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "spring.configuration.checksum": "b8aa1e1e8724c4c0696f2b96d9ff3742",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CreateTestDialog.Recents.Supers">
+      <recent name="" />
+    </key>
+    <key name="CreateTestDialog.RecentsKey">
+      <recent name="com.example.integrando_database.unittests.mockito.services" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.PersonServicesTest.testcreate">
+    <configuration name="PersonServicesTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="integrando_database" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.integrando_database.unittests.mockito.services.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.integrando_database.unittests.mockito.services" />
+      <option name="MAIN_CLASS_NAME" value="com.example.integrando_database.unittests.mockito.services.PersonServicesTest" />
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PersonServicesTest.create" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="integrando_database" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.integrando_database.unittests.mockito.services.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.integrando_database.unittests.mockito.services" />
+      <option name="MAIN_CLASS_NAME" value="com.example.integrando_database.unittests.mockito.services.PersonServicesTest" />
+      <option name="METHOD_NAME" value="create" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PersonServicesTest.findAll" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="integrando_database" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.integrando_database.unittests.mockito.services.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.integrando_database.unittests.mockito.services" />
+      <option name="MAIN_CLASS_NAME" value="com.example.integrando_database.unittests.mockito.services.PersonServicesTest" />
+      <option name="METHOD_NAME" value="findAll" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PersonServicesTest.findById" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="integrando_database" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.integrando_database.unittests.mockito.services.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.integrando_database.unittests.mockito.services" />
+      <option name="MAIN_CLASS_NAME" value="com.example.integrando_database.unittests.mockito.services.PersonServicesTest" />
+      <option name="METHOD_NAME" value="findById" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PersonServicesTest.testcreate" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="integrando_database" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.example.integrando_database.unittests.mockito.services.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.example.integrando_database.unittests.mockito.services" />
+      <option name="MAIN_CLASS_NAME" value="com.example.integrando_database.unittests.mockito.services.PersonServicesTest" />
+      <option name="METHOD_NAME" value="testcreate" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="JetRunConfigurationType">
+      <module name="content_negotiation" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="KotlinStandaloneScriptRunConfigurationType">
+      <module name="content_negotiation" />
+      <option name="filePath" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="IntegrandoDatabaseApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" nameIsGenerated="true">
+      <module name="integrando_database" />
+      <option name="SPRING_BOOT_MAIN_CLASS" value="com.example.integrando_database.IntegrandoDatabaseApplication" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JUnit.PersonServicesTest.testcreate" />
+        <item itemvalue="JUnit.PersonServicesTest.create" />
+        <item itemvalue="JUnit.PersonServicesTest" />
+        <item itemvalue="JUnit.PersonServicesTest.findAll" />
+        <item itemvalue="JUnit.PersonServicesTest.findById" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="3443f45c-4036-4c03-9fae-1a7d6a19fd94" name="Changes" comment="" />
+      <created>1678974908820</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1678974908820</updated>
+      <workItem from="1678974910968" duration="974000" />
+      <workItem from="1679012883198" duration="432000" />
+      <workItem from="1679058766650" duration="3505000" />
+      <workItem from="1679106257136" duration="60000" />
+      <workItem from="1679337463035" duration="3080000" />
+      <workItem from="1679340565822" duration="405000" />
+      <workItem from="1679344159360" duration="2486000" />
+      <workItem from="1679403769310" duration="720000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
