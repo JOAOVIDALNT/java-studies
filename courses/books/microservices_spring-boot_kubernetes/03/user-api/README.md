@@ -1,4 +1,12 @@
-### Protocolo HTTP
+## Oque desenvolvi nesse capítulo?
+
+- Criamos o projeto spring boot do zero, adicionando parent, dependencia e setando a classe de inicialização
+- Criamos a classe DTO e Controller para manipular users instanciados em uma lista na controller
+
+
+### Anotações
+
+#### Protocolo HTTP
 
 O HTTP é o principal protocolo da Web, ele define como deve ser feita uma
 requisição para uma aplicação, incluindo a URL, os parâmetros, os cabeçalhos e
