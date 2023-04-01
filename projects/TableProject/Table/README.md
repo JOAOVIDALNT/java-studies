@@ -3,8 +3,11 @@
 - [x] Conectar db
 - [x] Tratar exceções
 - [x] Implementar swagger
-- [ ] Implementa DTO e Mapeamento
+- [ ] Implementar DTO e Mapeamento
+- [ ] Modificar gerenciamento de Status para Enum com strategy
 - [ ] Implementar HATEOAS (?)
+- [ ] Estudar e implementar Spring Security
+- [ ] Estudar e implementar testes
 
 
 #### Tratmento de exceções
