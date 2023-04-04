@@ -1,10 +1,11 @@
 package br.dev.joaovidal.table.service;
 
+import br.dev.joaovidal.table.enums.Status;
 import br.dev.joaovidal.table.exceptions.BookNotFoundException;
 import br.dev.joaovidal.table.model.Book;
 import br.dev.joaovidal.table.repository.BookRepository;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.ResponseEntity;
+
 import org.springframework.stereotype.Service;
 
 import javax.validation.Valid;
@@ -22,6 +23,10 @@ public class BookService {
     }
 
     public Book create(@Valid Book entity) {
+        if(entity.getStatus() != Status.READ) {
+            String content = "Book not finished yet";
+            entity.setReview(content);
+        }
         return repository.save(entity);
     }
 
@@ -34,10 +39,14 @@ public class BookService {
     public Book update(Long id, Book entity) {
         Book book = repository.findById(id).get();
 
+        if(entity.getStatus() != Status.READ) {
+            String content = "Book not finished yet";
+            entity.setReview(content);
+        }
+
         book.setTitle(entity.getTitle());
         book.setAuthor(entity.getAuthor());
-        book.setReading(entity.getReading());
-        book.setFinish(entity.getFinish());
+        book.setStatus(entity.getStatus());
         book.setReview(entity.getReview());
 
         return repository.save(book);

@@ -1,7 +1,7 @@
 package br.dev.joaovidal.table.model;
 
 
-import org.springframework.boot.autoconfigure.web.WebProperties;
+import br.dev.joaovidal.table.enums.Status;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -19,11 +19,12 @@ public class Book {
 
     private String author;
 
-    private Boolean reading;
-
-    private Boolean finish;
+    private Status status;
 
     private String review;
+
+    public Book() {
+    }
 
     public String getTitle() {
         return title;
@@ -41,20 +42,12 @@ public class Book {
         this.author = author;
     }
 
-    public Boolean getReading() {
-        return reading;
+    public Status getStatus() {
+        return status;
     }
 
-    public void setReading(Boolean reading) {
-        this.reading = reading;
-    }
-
-    public Boolean getFinish() {
-        return finish;
-    }
-
-    public void setFinish(Boolean finish) {
-        this.finish = finish;
+    public void setStatus(Status status) {
+        this.status = status;
     }
 
     public String getReview() {
@@ -64,4 +57,5 @@ public class Book {
     public void setReview(String review) {
         this.review = review;
     }
+
 }
