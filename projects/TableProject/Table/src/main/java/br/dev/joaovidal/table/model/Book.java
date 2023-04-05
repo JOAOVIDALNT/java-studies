@@ -3,10 +3,7 @@ package br.dev.joaovidal.table.model;
 
 import br.dev.joaovidal.table.enums.Status;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 
 @Entity
 public class Book {
@@ -14,16 +11,20 @@ public class Book {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
     private String title;
-
     private String author;
-
     private Status status;
-
     private String review;
 
     public Book() {
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
     }
 
     public String getTitle() {
@@ -54,8 +55,8 @@ public class Book {
         return review;
     }
 
-    public void setReview(String review) {
-        this.review = review;
+    public void setReview(String content, Status status) {
+        this.review = status.reviewSet(content);
     }
 
 }

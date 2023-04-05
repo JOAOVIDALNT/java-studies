@@ -18,15 +18,12 @@ public class BookService {
     @Autowired
     private BookRepository repository;
 
+
     public List<Book> getAll() {
         return repository.findAll();
     }
 
     public Book create(@Valid Book entity) {
-        if(entity.getStatus() != Status.READ) {
-            String content = "Book not finished yet";
-            entity.setReview(content);
-        }
         return repository.save(entity);
     }
 
@@ -39,15 +36,10 @@ public class BookService {
     public Book update(Long id, Book entity) {
         Book book = repository.findById(id).get();
 
-        if(entity.getStatus() != Status.READ) {
-            String content = "Book not finished yet";
-            entity.setReview(content);
-        }
-
         book.setTitle(entity.getTitle());
         book.setAuthor(entity.getAuthor());
         book.setStatus(entity.getStatus());
-        book.setReview(entity.getReview());
+        book.setReview(entity.getReview(), entity.getStatus());
 
         return repository.save(book);
     }
