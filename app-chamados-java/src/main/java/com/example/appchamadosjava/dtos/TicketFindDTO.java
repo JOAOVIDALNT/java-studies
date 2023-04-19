@@ -2,15 +2,24 @@ package com.example.appchamadosjava.dtos;
 
 import com.example.appchamadosjava.enums.ProblemEnum;
 import com.example.appchamadosjava.enums.SectorEnum;
+import com.example.appchamadosjava.enums.StatusEnum;
 
-import javax.validation.constraints.NotNull;
+public class TicketFindDTO {
 
-public class TicketDTO {
-
+    private Long id;
     private String name;
     private ProblemEnum problem;
     private SectorEnum sector;
+    private StatusEnum status;
     private String description;
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
 
     public String getName() {
         return name;
@@ -34,6 +43,14 @@ public class TicketDTO {
 
     public void setSector(SectorEnum sector) {
         this.sector = sector;
+    }
+
+    public StatusEnum getStatus() {
+        return status;
+    }
+
+    public void setStatus(StatusEnum status) {
+        this.status = status;
     }
 
     public String getDescription() {
