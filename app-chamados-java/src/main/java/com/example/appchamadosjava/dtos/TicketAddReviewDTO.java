@@ -1,6 +1,6 @@
 package com.example.appchamadosjava.dtos;
 
-public class TickerAddReviewDTO {
+public class TicketAddReviewDTO {
     private String review;
 
     public String getReview() {

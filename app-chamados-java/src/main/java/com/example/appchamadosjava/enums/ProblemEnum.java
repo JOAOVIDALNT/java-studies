@@ -1,9 +1,9 @@
 package com.example.appchamadosjava.enums;
 
 public enum ProblemEnum {
-    SERVIÇOS,
+    SERVICOS,
     SISTEMA,
     EQUIPAMENTO,
-    PERIFÉRICO
+    PERIFERICO
 
 }

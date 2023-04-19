@@ -4,7 +4,7 @@ public enum SectorEnum {
     E_COMMERCE,
     MARKETING,
     RH,
-    RECEPÇÃO,
+    RECEPCAO,
     ESTOQUE
 
 }

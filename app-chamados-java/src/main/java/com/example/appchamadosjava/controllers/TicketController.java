@@ -1,9 +1,12 @@
 package com.example.appchamadosjava.controllers;
 
-import com.example.appchamadosjava.dtos.TickerAddReviewDTO;
+import com.example.appchamadosjava.dtos.TicketAddReviewDTO;
 import com.example.appchamadosjava.dtos.TicketDTO;
 import com.example.appchamadosjava.dtos.TicketFindDTO;
 import com.example.appchamadosjava.dtos.TicketStatusUpdateDTO;
+import com.example.appchamadosjava.enums.ProblemEnum;
+import com.example.appchamadosjava.enums.SectorEnum;
+import com.example.appchamadosjava.enums.StatusEnum;
 import com.example.appchamadosjava.services.TicketService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
@@ -33,6 +36,21 @@ public class TicketController {
         return new ResponseEntity<>(ticketService.findById(id), HttpStatus.OK);
     }
 
+    @GetMapping("/status/{status}")
+    public ResponseEntity<List<TicketFindDTO>> findByStatus(@PathVariable StatusEnum status) {
+        return new ResponseEntity<>(ticketService.findByStatus(status), HttpStatus.OK);
+    }
+
+    @GetMapping("/sector/{sector}")
+    public ResponseEntity<List<TicketFindDTO>> findBySector(@PathVariable SectorEnum sector) {
+        return new ResponseEntity<>(ticketService.findBySector(sector), HttpStatus.OK);
+    }
+
+    @GetMapping("/problem/{problem}")
+    public ResponseEntity<List<TicketFindDTO>> findByProblem(@PathVariable ProblemEnum problem) {
+        return new ResponseEntity<>(ticketService.findByProblem(problem), HttpStatus.OK);
+    }
+
     @DeleteMapping("/{id}")
     public ResponseEntity<?> delete(@PathVariable Long id) {
         ticketService.delete(id);
@@ -45,7 +63,7 @@ public class TicketController {
     }
 
     @PutMapping("/review/{id}")
-    public ResponseEntity<TickerAddReviewDTO> addReview(@PathVariable Long id, TickerAddReviewDTO tickerAddReviewDTO) {
-        return new ResponseEntity<>(ticketService.addReview(id, tickerAddReviewDTO), HttpStatus.OK);
+    public ResponseEntity<TicketAddReviewDTO> addReview(@PathVariable Long id, TicketAddReviewDTO ticketAddReviewDTO) {
+        return new ResponseEntity<>(ticketService.addReview(id, ticketAddReviewDTO), HttpStatus.OK);
     }
 }

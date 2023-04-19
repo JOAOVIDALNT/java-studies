@@ -3,6 +3,7 @@ package com.example.appchamadosjava.exceptions;
 import com.example.appchamadosjava.exceptions.ticketExeptions.InvalidDescriptionException;
 import com.example.appchamadosjava.exceptions.ticketExeptions.InvalidNameException;
 import com.example.appchamadosjava.exceptions.ticketExeptions.TicketNotFoundException;
+import com.example.appchamadosjava.exceptions.ticketExeptions.UnableToReviewException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;
@@ -38,6 +39,14 @@ public class CustomControllerAdvice extends ResponseEntityExceptionHandler {
         MessageExceptionHandler error = new MessageExceptionHandler(
                 new Date(), HttpStatus.NOT_FOUND.value(), "Nenhum chamado encontrado com o id informado");
         return new ResponseEntity<>(error, HttpStatus.NOT_FOUND);
+    }
+
+    @ResponseBody
+    @ExceptionHandler(UnableToReviewException.class)
+    public ResponseEntity<MessageExceptionHandler> unableToReview(UnableToReviewException ex) {
+        MessageExceptionHandler error = new MessageExceptionHandler(
+                new Date(), HttpStatus.BAD_REQUEST.value(), "Só é possível avaliar problemas resolvidos");
+        return new ResponseEntity<>(error, HttpStatus.BAD_REQUEST);
     }
 
 

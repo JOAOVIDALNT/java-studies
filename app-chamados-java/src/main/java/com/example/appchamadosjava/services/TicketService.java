@@ -1,13 +1,16 @@
 package com.example.appchamadosjava.services;
 
-import com.example.appchamadosjava.dtos.TickerAddReviewDTO;
+import com.example.appchamadosjava.dtos.TicketAddReviewDTO;
 import com.example.appchamadosjava.dtos.TicketDTO;
 import com.example.appchamadosjava.dtos.TicketFindDTO;
 import com.example.appchamadosjava.dtos.TicketStatusUpdateDTO;
 import com.example.appchamadosjava.enums.ProblemEnum;
+import com.example.appchamadosjava.enums.SectorEnum;
+import com.example.appchamadosjava.enums.StatusEnum;
 import com.example.appchamadosjava.exceptions.ticketExeptions.InvalidDescriptionException;
 import com.example.appchamadosjava.exceptions.ticketExeptions.InvalidNameException;
 import com.example.appchamadosjava.exceptions.ticketExeptions.TicketNotFoundException;
+import com.example.appchamadosjava.exceptions.ticketExeptions.UnableToReviewException;
 import com.example.appchamadosjava.mapper.ModelMap;
 import com.example.appchamadosjava.models.Ticket;
 import com.example.appchamadosjava.repositories.TicketRepository;
@@ -15,7 +18,6 @@ import com.example.appchamadosjava.validation.ValidName;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import javax.validation.Valid;
-import java.security.InvalidParameterException;
 import java.util.List;
 
 @Service
@@ -50,6 +52,24 @@ public class TicketService {
         return ModelMap.parseObject(entity, TicketFindDTO.class);
     }
 
+    public List<TicketFindDTO> findByStatus(StatusEnum status) {
+        List<Ticket> entity = ticketRepository.findAllByStatus(status);
+
+        return ModelMap.parseListObjects(entity, TicketFindDTO.class);
+    }
+
+    public List<TicketFindDTO> findBySector(SectorEnum sector) {
+        List<Ticket> entity = ticketRepository.findAllBySector(sector);
+
+        return ModelMap.parseListObjects(entity, TicketFindDTO.class);
+    }
+
+    public List<TicketFindDTO> findByProblem(ProblemEnum problem) {
+        List<Ticket> entity = ticketRepository.findAllByProblem(problem);
+
+        return ModelMap.parseListObjects(entity, TicketFindDTO.class);
+    }
+
     public void delete(Long id) {
         Ticket entity = ticketRepository.findById(id).orElseThrow(() -> new TicketNotFoundException());
 
@@ -65,12 +85,18 @@ public class TicketService {
         return dto;
     }
 
-    public TickerAddReviewDTO addReview(Long id, TickerAddReviewDTO tickerAddReviewDTO) {
+    public TicketAddReviewDTO addReview(Long id, TicketAddReviewDTO ticketAddReviewDTO) {
         Ticket entity = ticketRepository.findById(id).orElseThrow(() -> new TicketNotFoundException());
 
-        entity.setReview(tickerAddReviewDTO.getReview());
+        if(entity.getStatus() != StatusEnum.RESOLVIDO) {
+            throw new UnableToReviewException();
+        }
 
-        TickerAddReviewDTO dto = ModelMap.parseObject(ticketRepository.save(entity), TickerAddReviewDTO.class);
+        entity.setReview(ticketAddReviewDTO.getReview());
+
+        TicketAddReviewDTO dto = ModelMap.parseObject(ticketRepository.save(entity), TicketAddReviewDTO.class);
         return dto;
     }
+
+
 }
