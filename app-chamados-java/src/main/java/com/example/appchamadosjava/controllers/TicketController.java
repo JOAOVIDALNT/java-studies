@@ -1,9 +1,6 @@
 package com.example.appchamadosjava.controllers;
 
-import com.example.appchamadosjava.dtos.TicketAddReviewDTO;
-import com.example.appchamadosjava.dtos.TicketDTO;
-import com.example.appchamadosjava.dtos.TicketFindDTO;
-import com.example.appchamadosjava.dtos.TicketStatusUpdateDTO;
+import com.example.appchamadosjava.dtos.*;
 import com.example.appchamadosjava.enums.ProblemEnum;
 import com.example.appchamadosjava.enums.SectorEnum;
 import com.example.appchamadosjava.enums.StatusEnum;
@@ -65,5 +62,10 @@ public class TicketController {
     @PutMapping("/review/{id}")
     public ResponseEntity<TicketAddReviewDTO> addReview(@PathVariable Long id, TicketAddReviewDTO ticketAddReviewDTO) {
         return new ResponseEntity<>(ticketService.addReview(id, ticketAddReviewDTO), HttpStatus.OK);
+    }
+
+    @GetMapping("/review/{id}")
+    public ResponseEntity<TicketReviewDTO> getReview(@PathVariable Long id) {
+        return new ResponseEntity<>(ticketService.getReview(id), HttpStatus.OK);
     }
 }

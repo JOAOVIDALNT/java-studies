@@ -1,9 +1,6 @@
 package com.example.appchamadosjava.services;
 
-import com.example.appchamadosjava.dtos.TicketAddReviewDTO;
-import com.example.appchamadosjava.dtos.TicketDTO;
-import com.example.appchamadosjava.dtos.TicketFindDTO;
-import com.example.appchamadosjava.dtos.TicketStatusUpdateDTO;
+import com.example.appchamadosjava.dtos.*;
 import com.example.appchamadosjava.enums.ProblemEnum;
 import com.example.appchamadosjava.enums.SectorEnum;
 import com.example.appchamadosjava.enums.StatusEnum;
@@ -96,6 +93,16 @@ public class TicketService {
 
         TicketAddReviewDTO dto = ModelMap.parseObject(ticketRepository.save(entity), TicketAddReviewDTO.class);
         return dto;
+    }
+
+    public TicketReviewDTO getReview(Long id) {
+        Ticket entity = ticketRepository.findById(id).orElseThrow(() -> new TicketNotFoundException());
+
+        if(entity.getStatus() != StatusEnum.RESOLVIDO) {
+            throw new UnableToReviewException();
+        }
+
+        return ModelMap.parseObject(entity, TicketReviewDTO.class);
     }
 
 
