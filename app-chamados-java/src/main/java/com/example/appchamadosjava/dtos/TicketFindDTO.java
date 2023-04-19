@@ -4,6 +4,8 @@ import com.example.appchamadosjava.enums.ProblemEnum;
 import com.example.appchamadosjava.enums.SectorEnum;
 import com.example.appchamadosjava.enums.StatusEnum;
 
+import java.time.LocalDateTime;
+
 public class TicketFindDTO {
 
     private Long id;
@@ -60,4 +62,5 @@ public class TicketFindDTO {
     public void setDescription(String description) {
         this.description = description;
     }
+
 }

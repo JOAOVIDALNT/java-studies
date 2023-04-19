@@ -5,16 +5,13 @@ import com.example.appchamadosjava.exceptions.ticketExeptions.InvalidNameExcepti
 import com.example.appchamadosjava.exceptions.ticketExeptions.TicketNotFoundException;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.validation.BindingResult;
-import org.springframework.validation.FieldError;
-import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler;
 
 import java.util.Date;
-import java.util.List;
+
 
 @ControllerAdvice(basePackages = "com.example.appchamadosjava.controllers")
 public class CustomControllerAdvice extends ResponseEntityExceptionHandler {

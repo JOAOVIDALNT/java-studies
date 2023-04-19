@@ -3,8 +3,7 @@ package com.example.appchamadosjava.dtos;
 import com.example.appchamadosjava.enums.ProblemEnum;
 import com.example.appchamadosjava.enums.SectorEnum;
 
-import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.NotNull;
+import java.time.LocalDateTime;
 
 public class TicketDTO {
 
@@ -44,4 +43,5 @@ public class TicketDTO {
     public void setDescription(String description) {
         this.description = description;
     }
+
 }

@@ -4,17 +4,18 @@ import com.example.appchamadosjava.dtos.TickerAddReviewDTO;
 import com.example.appchamadosjava.dtos.TicketDTO;
 import com.example.appchamadosjava.dtos.TicketFindDTO;
 import com.example.appchamadosjava.dtos.TicketStatusUpdateDTO;
+import com.example.appchamadosjava.enums.ProblemEnum;
 import com.example.appchamadosjava.exceptions.ticketExeptions.InvalidDescriptionException;
 import com.example.appchamadosjava.exceptions.ticketExeptions.InvalidNameException;
 import com.example.appchamadosjava.exceptions.ticketExeptions.TicketNotFoundException;
 import com.example.appchamadosjava.mapper.ModelMap;
 import com.example.appchamadosjava.models.Ticket;
 import com.example.appchamadosjava.repositories.TicketRepository;
+import com.example.appchamadosjava.validation.ValidName;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import org.springframework.web.bind.annotation.PathVariable;
-
 import javax.validation.Valid;
+import java.security.InvalidParameterException;
 import java.util.List;
 
 @Service
@@ -26,7 +27,10 @@ public class TicketService {
         Ticket entity = ModelMap.parseObject(ticketDTO, Ticket.class);
         TicketDTO dto = ModelMap.parseObject(ticketRepository.save(entity), TicketDTO.class);
 
-        if(ticketDTO.getName() == null || ticketDTO.getName().length() < 3) {
+        ValidName validName = new ValidName();
+        validName.nameValidation(ticketDTO.getName());
+
+        if(ticketDTO.getName().length() < 3) {
             throw new InvalidNameException();
         }
         if(ticketDTO.getDescription() == null || ticketDTO.getDescription().length() < 5) {
@@ -63,10 +67,6 @@ public class TicketService {
 
     public TickerAddReviewDTO addReview(Long id, TickerAddReviewDTO tickerAddReviewDTO) {
         Ticket entity = ticketRepository.findById(id).orElseThrow(() -> new TicketNotFoundException());
-
-        if (entity == null) {
-            throw new TicketNotFoundException();
-        }
 
         entity.setReview(tickerAddReviewDTO.getReview());
 

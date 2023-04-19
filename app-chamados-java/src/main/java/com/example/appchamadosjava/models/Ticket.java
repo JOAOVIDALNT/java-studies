@@ -3,13 +3,11 @@ package com.example.appchamadosjava.models;
 import com.example.appchamadosjava.enums.ProblemEnum;
 import com.example.appchamadosjava.enums.SectorEnum;
 import com.example.appchamadosjava.enums.StatusEnum;
-
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.NotNull;
+import java.time.LocalDateTime;
 
 @Entity
 public class Ticket {
@@ -79,4 +77,5 @@ public class Ticket {
     public void setReview(String review) {
         this.review = review;
     }
+
 }
