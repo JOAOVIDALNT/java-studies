@@ -3,6 +3,7 @@ package com.example.appchamadosjava.dtos;
 import com.example.appchamadosjava.enums.ProblemEnum;
 import com.example.appchamadosjava.enums.SectorEnum;
 
+import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 
 public class TicketDTO {
