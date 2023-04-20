@@ -4,7 +4,9 @@ import com.example.appchamadosjava.enums.ProblemEnum;
 import com.example.appchamadosjava.enums.SectorEnum;
 import com.example.appchamadosjava.enums.StatusEnum;
 
+import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.util.Date;
 
 public class TicketFindDTO {
 
@@ -14,6 +16,7 @@ public class TicketFindDTO {
     private SectorEnum sector;
     private StatusEnum status;
     private String description;
+    private LocalDate initialDate;
 
     public Long getId() {
         return id;
@@ -63,4 +66,11 @@ public class TicketFindDTO {
         this.description = description;
     }
 
+    public LocalDate getInitialDate() {
+        return initialDate;
+    }
+
+    public void setInitialDate(LocalDate initialDate) {
+        this.initialDate = initialDate;
+    }
 }

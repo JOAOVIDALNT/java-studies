@@ -4,10 +4,7 @@ import com.example.appchamadosjava.dtos.*;
 import com.example.appchamadosjava.enums.ProblemEnum;
 import com.example.appchamadosjava.enums.SectorEnum;
 import com.example.appchamadosjava.enums.StatusEnum;
-import com.example.appchamadosjava.exceptions.ticketExeptions.InvalidDescriptionException;
-import com.example.appchamadosjava.exceptions.ticketExeptions.InvalidNameException;
-import com.example.appchamadosjava.exceptions.ticketExeptions.TicketNotFoundException;
-import com.example.appchamadosjava.exceptions.ticketExeptions.UnableToReviewException;
+import com.example.appchamadosjava.exceptions.ticketExeptions.*;
 import com.example.appchamadosjava.mapper.ModelMap;
 import com.example.appchamadosjava.models.Ticket;
 import com.example.appchamadosjava.repositories.TicketRepository;
@@ -15,6 +12,7 @@ import com.example.appchamadosjava.validation.ValidName;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import javax.validation.Valid;
+import java.time.LocalDate;
 import java.util.List;
 
 @Service
@@ -24,6 +22,7 @@ public class TicketService {
 
     public TicketDTO create(@Valid TicketDTO ticketDTO) {
         Ticket entity = ModelMap.parseObject(ticketDTO, Ticket.class);
+        entity.setInitialDate(LocalDate.now());
         TicketDTO dto = ModelMap.parseObject(ticketRepository.save(entity), TicketDTO.class);
 
         ValidName validName = new ValidName();
@@ -76,7 +75,15 @@ public class TicketService {
     public TicketStatusUpdateDTO updateStatus(Long id, TicketStatusUpdateDTO ticketStatusUpdateDTO) {
         Ticket entity = ticketRepository.findById(id).orElseThrow(() -> new TicketNotFoundException());
 
+        if(entity.getStatus() == StatusEnum.RESOLVIDO || entity.getStatus() == StatusEnum.CANCELADO) {
+            throw new UnableToUpdateException();
+        }
+
+        if(ticketStatusUpdateDTO.getStatus() == StatusEnum.RESOLVIDO || ticketStatusUpdateDTO.getStatus() == StatusEnum.CANCELADO) {
+            entity.setFinishDate(LocalDate.now());
+        }
         entity.setStatus(ticketStatusUpdateDTO.getStatus());
+
 
         TicketStatusUpdateDTO dto = ModelMap.parseObject(ticketRepository.save(entity), TicketStatusUpdateDTO.class);
         return dto;
@@ -103,6 +110,15 @@ public class TicketService {
         }
 
         return ModelMap.parseObject(entity, TicketReviewDTO.class);
+    }
+
+    public TicketProblemUpdateDTO updateProblem(Long id, TicketProblemUpdateDTO ticketProblemUpdateDTO) {
+        Ticket entity = ticketRepository.findById(id).orElseThrow(() -> new TicketNotFoundException());
+
+        entity.setProblem(ticketProblemUpdateDTO.getProblem());
+
+        TicketProblemUpdateDTO dto = ModelMap.parseObject(ticketRepository.save(entity), TicketProblemUpdateDTO.class);
+        return dto;
     }
 
 

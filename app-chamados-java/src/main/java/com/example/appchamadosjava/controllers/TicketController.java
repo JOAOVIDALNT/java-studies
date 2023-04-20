@@ -59,6 +59,11 @@ public class TicketController {
         return new ResponseEntity<>(ticketService.updateStatus(id, ticketStatusUpdateDTO), HttpStatus.OK);
     }
 
+    @PutMapping("/problem/{id}")
+    public ResponseEntity<TicketProblemUpdateDTO> updateProblem(@PathVariable Long id, TicketProblemUpdateDTO ticketProblemUpdateDTO) {
+        return new ResponseEntity<>(ticketService.updateProblem(id, ticketProblemUpdateDTO), HttpStatus.OK);
+    }
+
     @PutMapping("/review/{id}")
     public ResponseEntity<TicketAddReviewDTO> addReview(@PathVariable Long id, TicketAddReviewDTO ticketAddReviewDTO) {
         return new ResponseEntity<>(ticketService.addReview(id, ticketAddReviewDTO), HttpStatus.OK);

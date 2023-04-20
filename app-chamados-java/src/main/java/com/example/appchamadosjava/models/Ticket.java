@@ -7,7 +7,9 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.util.Date;
 
 @Entity
 public class Ticket {
@@ -21,6 +23,8 @@ public class Ticket {
     private StatusEnum status = StatusEnum.PENDENTE;
     private String description;
     private String review;
+    private LocalDate initialDate;
+    private LocalDate finishDate;
 
     public Long getId() {
         return id;
@@ -78,4 +82,19 @@ public class Ticket {
         this.review = review;
     }
 
+    public LocalDate getInitialDate() {
+        return initialDate;
+    }
+
+    public void setInitialDate(LocalDate initialDate) {
+        this.initialDate = initialDate;
+    }
+
+    public LocalDate getFinishDate() {
+        return finishDate;
+    }
+
+    public void setFinishDate(LocalDate finishDate) {
+        this.finishDate = finishDate;
+    }
 }

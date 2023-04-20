@@ -1,9 +1,6 @@
 package com.example.appchamadosjava.exceptions;
 
-import com.example.appchamadosjava.exceptions.ticketExeptions.InvalidDescriptionException;
-import com.example.appchamadosjava.exceptions.ticketExeptions.InvalidNameException;
-import com.example.appchamadosjava.exceptions.ticketExeptions.TicketNotFoundException;
-import com.example.appchamadosjava.exceptions.ticketExeptions.UnableToReviewException;
+import com.example.appchamadosjava.exceptions.ticketExeptions.*;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.ControllerAdvice;
@@ -46,6 +43,14 @@ public class CustomControllerAdvice extends ResponseEntityExceptionHandler {
     public ResponseEntity<MessageExceptionHandler> unableToReview(UnableToReviewException ex) {
         MessageExceptionHandler error = new MessageExceptionHandler(
                 new Date(), HttpStatus.BAD_REQUEST.value(), "Só é possível avaliar problemas resolvidos");
+        return new ResponseEntity<>(error, HttpStatus.BAD_REQUEST);
+    }
+
+    @ResponseBody
+    @ExceptionHandler(UnableToUpdateException.class)
+    public ResponseEntity<MessageExceptionHandler> unableToUpdate(UnableToUpdateException ex) {
+        MessageExceptionHandler error = new MessageExceptionHandler(
+                new Date(), HttpStatus.BAD_REQUEST.value(), "Não é possível alterar o status de chamados finalizados");
         return new ResponseEntity<>(error, HttpStatus.BAD_REQUEST);
     }
 
