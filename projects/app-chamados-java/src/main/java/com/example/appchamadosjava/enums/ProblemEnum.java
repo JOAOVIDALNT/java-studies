@@ -23,6 +23,7 @@ public enum ProblemEnum {
     PERIFERICO_TECLADO,
     PERIFERICO_MONITOR,
 
+    //
     PLATAFORMA_SHOPPE,
     PLATAFORMA_SHEIN
 

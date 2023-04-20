@@ -4,7 +4,7 @@ import com.example.appchamadosjava.enums.ProblemEnum;
 import com.example.appchamadosjava.enums.SectorEnum;
 
 import java.time.LocalDate;
-import java.util.Date;
+
 
 public class TicketReviewDTO {
 
