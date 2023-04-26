@@ -32,9 +32,9 @@ public class TicketService {
         if(ticketDTO.getName().length() < 3) {
             throw new InvalidNameException();
         }
-        if(ticketDTO.getDescription() == null || ticketDTO.getDescription().length() < 5) {
-            throw new InvalidDescriptionException();
-        }
+//        if(ticketDTO.getDescription() == null || ticketDTO.getDescription().length() < 5) {
+//            throw new InvalidDescriptionException();
+//        }
 
         return dto;
     }
@@ -120,6 +120,12 @@ public class TicketService {
 
         TicketProblemUpdateDTO dto = ModelMap.parseObject(ticketRepository.save(entity), TicketProblemUpdateDTO.class);
         return dto;
+    }
+
+    public TicketDescriptionDTO getDescription(Long id) {
+        Ticket entity = ticketRepository.findById(id).orElseThrow(() -> new TicketNotFoundException());
+
+        return ModelMap.parseObject(entity, TicketDescriptionDTO.class);
     }
 
 

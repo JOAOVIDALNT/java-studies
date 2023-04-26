@@ -74,4 +74,9 @@ public class TicketController {
     public ResponseEntity<TicketReviewDTO> getReview(@PathVariable Long id) {
         return new ResponseEntity<>(ticketService.getReview(id), HttpStatus.OK);
     }
+
+    @GetMapping("/description/{id}")
+    public ResponseEntity<TicketDescriptionDTO> getDescription(@PathVariable Long id) {
+        return new ResponseEntity<>(ticketService.getDescription(id), HttpStatus.OK);
+    }
 }
