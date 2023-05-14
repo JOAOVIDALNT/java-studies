@@ -4,8 +4,9 @@ import br.dev.joaovidal.table.enums.Status;
 import br.dev.joaovidal.table.exceptions.BookNotFoundException;
 import br.dev.joaovidal.table.model.Book;
 import br.dev.joaovidal.table.repository.BookRepository;
-import org.springframework.beans.factory.annotation.Autowired;
 
+
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import javax.validation.Valid;
