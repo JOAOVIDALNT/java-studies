@@ -61,4 +61,6 @@ public class SecurityConfig {
 
 - Nos próximos passos modificaremos o projeto para utilizar uma credencial provida pelo Google (OAuth2)
 
+# OAuth 2.0 e OpenID
+
 
