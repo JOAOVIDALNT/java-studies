@@ -15,14 +15,14 @@ Your security configuration must be updated before running your application in p
 > http://localhost:8081/logout
 
 ## Tela de Login ao tentar acessar a rota /public
-<img src="C:\Users\NYBC\dev\java\java-studies\concepts\spring-security\security-demo\assets\img.png" width="600" height="300">
+<img src="./assets/img.png" width="600" height="300">
 
 ## Tela autênticada ao acessar a rota /public
-<img src="C:\Users\NYBC\dev\java\java-studies\concepts\spring-security\security-demo\assets\img_1.png" width="600" height="300">
+<img src="./assets/img_1.png" width="600" height="300">
 
 ## Tela de confirmação de logout ao acessar a rota /logout e bloqueio de acesso
-<img src="C:\Users\NYBC\dev\java\java-studies\concepts\spring-security\security-demo\assets\img_2.png" width="400" height="200">
-<img src="C:\Users\NYBC\dev\java\java-studies\concepts\spring-security\security-demo\assets\img_3.png" width="400" height="200">
+<img src="./assets/img_2.png" width="400" height="200">
+<img src="./assets/img_3.png" width="400" height="200">
 
 # Autênticando apenas rotas específicas
 
@@ -52,7 +52,7 @@ public class SecurityConfig {
 - O método formLogin() recebe como parâmetro o formulário padrão do spring security, caso não use essa configuração as urls que necessitam de autênticação retornam 403.
 
 ## Retorno da url /private caso a formLogin não esteja configurada
-<img src="C:\Users\NYBC\dev\java\java-studies\concepts\spring-security\security-demo\assets\img_4.png" width="500" height="300">
+<img src="./assets/img_4.png" width="500" height="300">
 
 <hr>
 
@@ -66,11 +66,11 @@ public class SecurityConfig {
 No site: https://console.cloud.google.com/apis/credentials adicionamos uma nova Id do cliente OAuth2.0 como credencial, definindo nomes e adicionando o endereço da aplicação (localhost no nosso caso) junto ao caminho /login/oauth2/code/google
 <br>
 <br>
-<img height="200" src="C:\Users\NYBC\dev\java\java-studies\concepts\spring-security\security-demo\assets\img_5.png" width="500"/>
+<img height="200" src="./assets/img_5.png" width="500"/>
 <br>
 Logo após isso nós copiamos o <strong>id de cliente</strong> e a <strong>chave secreta</strong> para dentro do application.properties
 
-<img src="C:\Users\NYBC\dev\java\java-studies\concepts\spring-security\security-demo\assets\img_6.png" width="400" height="400">
+<img src="./assets/img_6.png" width="400" height="400">
 
 ````properties
 spring.security.oauth2.client.registration.google.client-id=247983531729-c1ut5f3ake4tejh0uhevs5qkftaglavt.apps.googleusercontent.com
@@ -97,10 +97,10 @@ public class SecurityConfig {
 }
 ```
 ### Ao acessar a rota /private teremos o seguinte retorno:
-<img src="C:\Users\NYBC\dev\java\java-studies\concepts\spring-security\security-demo\assets\img_7.png" width="500" height="250">
+<img src="./assets/img_7.png" width="500" height="250">
 
 ### E ao logarmos com uma conta do google teremos acesso á rota:
-<img src="C:\Users\NYBC\dev\java\java-studies\concepts\spring-security\security-demo\assets\img_8.png" width="500" height="250">
+<img src="./assets/img_8.png" width="500" height="250">
 
 ## Utilizando o OpenID e retornando dados do usuário
 Podemos obter os dados da sessão através do AuthenticationPrincipal como parâmetro da url:
@@ -122,16 +122,16 @@ public class Example {
 }
 ````
 ### Rota /private autênticada com as informações acima:
-<img src="C:\Users\NYBC\dev\java\java-studies\concepts\spring-security\security-demo\assets\img_9.png" width="600" height="300">
+<img src="./assets/img_9.png" width="600" height="300">
 
 #### Cookie presente no navegador que autêntica a sessão:
-<img src="C:\Users\NYBC\dev\java\java-studies\concepts\spring-security\security-demo\assets\img_10.png" width="500" height="200">
+<img src="./assets/img_10.png" width="500" height="200">
 
 ### Acessando a url via terminal com o cookie correto:
-<img src="C:\Users\NYBC\dev\java\java-studies\concepts\spring-security\security-demo\assets\img_11.png" width="600" height="300">
+<img src="./assets/img_11.png" width="600" height="300">
 
 ### Acessando a url com o cookie incorreto:
-<img src="C:\Users\NYBC\dev\java\java-studies\concepts\spring-security\security-demo\assets\img_12.png" width="600" height="300">
+<img src="./assets/img_12.png" width="600" height="300">
 <br>
 Perceba que a aplicação te redireciona para ser autênticado
 
@@ -147,7 +147,7 @@ Agora basta adicionar no SecurityConfig o trecho de código
 ```.oauth2ResourceServer(OAuth2ResourceServerConfigurer::jwt)```
 
 ### Acessando a rota jwt com o token de autênticação
-<img src="C:\Users\NYBC\dev\java\java-studies\concepts\spring-security\security-demo\assets\img_13.png" width="600" height="300">
+<img src="./assets/img_13.png" width="600" height="300">
 <br>
 
 E finalmente, para manter o usuário logado com jwt e retornar seus dados, basta definir na controller:
