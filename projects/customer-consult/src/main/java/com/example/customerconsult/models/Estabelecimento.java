@@ -22,7 +22,7 @@ public class Estabelecimento {
     @Column(name = "email")
     private String email;
 
-    
+
 
     public Long getId() {
         return id;
